@@ -1,21 +1,21 @@
-#Schema Markup
+# Schema Markup
 
 A plugin that enables dynamically generates structured data.
 Structured data (JSON-LD schema) based on Schema.org that can be used on a webpage to provide search engines with rich data in a format they can be use to create snippets of information. These snippets can enhance your search results and potentially help to improve your sites visibility / SEO.
 A snippet could be your companies contact details, a carousel of products, reviews and much more.
 See Google's search engine gallery for details of snippet and structured data the support.
 
-##Features
+## Features
 - Easy for use - add component (or multiple components) "ldJson" on layout, page, partial and enjoi!
 - Support Dynamic Twig-variables
 - Support Custom Values as key/value from component alias define
 - Support recursive Nested schema
 
-##Live demo
+## Live demo
 >(schemamarkup/admin): https://schemamarkup.test.linkonoid.com/backend/backend/auth/signin
 
 
-##Sponsored information
+## Sponsored information
 Thanks Mightyhaggis for your support.
 
 
