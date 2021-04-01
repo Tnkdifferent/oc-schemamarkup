@@ -5,7 +5,7 @@ Structured data (JSON-LD schema) based on Schema.org that can be used on a webpa
 A snippet could be your companies contact details, a carousel of products, reviews and much more.
 See Google's search engine gallery for details of snippet and structured data the support.
 
-## Features
+##Features
 - Easy for use - add component (or multiple components) "ldJson" on layout, page, partial and enjoi!
 - Support Dynamic Twig-variables
 - Support Custom Values as key/value from component alias define
@@ -23,7 +23,7 @@ Thanks Mightyhaggis for your support.
 
 
 
-# Documentation
+#Documentation
 
 This is very brief information. More information can be found on the support forum or see a demo version of the plugin, where all sorts of settings are implemented (they are also test ones).
 
@@ -65,10 +65,10 @@ ContactPoint:
 ##Frontend
 
 
-### Include in layout or partial
+###Include in layout or partial
 The "ldJson" plugin component can be integrated into any OctoberCMS element that supports the use of standard CMS components (Layouts, Pages, Partials).
 
-### Dynamic variables
+###Dynamic variables
 Plugin supports all avaiables Twig variables ans Twig syntaxis in templates and in users key/value variables.
 Dynamic variables that are substituted into schematic templates can be called and used with templates in three different ways:
 - From the component, through the "Custom value" key/value pairs 
@@ -78,7 +78,7 @@ To pass an array of elements to template, use the Twig filter {{array_variable |
 - The variable can be set directly in the code section (through the key in the schema: `` array_set($this->componentAlias->schema['schemaName'], 'schemaKey', $customVariable);`` ), without defining it via Twig markup.
 
 
-### Nested schema
+###Nested schema
 Use "&" (or your custom prefix from Settings) for define nested schema on Templates in this format "address: &PostalAddress"
 
 
