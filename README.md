@@ -21,13 +21,9 @@ Thanks Mightyhaggis for your support.
 
 
 
-
-
 # Documentation
 
 This is very brief information. More information can be found on the support forum or see a demo version of the plugin, where all sorts of settings are implemented (they are also test ones).
-
-
 
 ## Settings
 
@@ -64,7 +60,6 @@ ContactPoint:
 
 ## Frontend
 
-
 ### Include in layout or partial
 The "ldJson" plugin component can be integrated into any OctoberCMS element that supports the use of standard CMS components (Layouts, Pages, Partials).
 
@@ -72,13 +67,13 @@ The "ldJson" plugin component can be integrated into any OctoberCMS element that
 Plugin supports all avaiables Twig variables ans Twig syntaxis in templates and in users key/value variables.
 Dynamic variables that are substituted into schematic templates can be called and used with templates in three different ways:
 - From the component, through the "Custom value" key/value pairs 
-Support key in dot notation format (parent.child). Value can be text or {{ twig_variable }} or link on &nestedSchema)
-- From the page, pass the variable for rendering via the Code-section: onStart () {$this['twig_variable'] = '.....'} and use the template in the schema definition {{twig_variable}}
+Support key in dot notation format (parent.child). Value can be text or ``{{ twig_variable }}`` or link on &nestedSchema)
+- From the page, pass the variable for rendering via the Code-section: ``onStart () {$this['twig_variable'] = '.....'}`` and use the template in the schema definition ``{{twig_variable}}``
 To pass an array of elements to template, use the Twig filter {{array_variable | json_encode}}
 - The variable can be set directly in the code section (through the key in the schema: `` array_set($this->componentAlias->schema['schemaName'], 'schemaKey', $customVariable);`` ), without defining it via Twig markup.
 
 
 ### Nested schema
-Use "&" (or your custom prefix from Settings) for define nested schema on Templates in this format "address: &PostalAddress"
+Use "&" (or your custom prefix from Settings) for define nested schema on Templates in this format ``address: &PostalAddress``
 
 
