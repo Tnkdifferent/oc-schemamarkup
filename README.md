@@ -72,7 +72,7 @@ By specifying a key in dot notation *parent.child* you can targent values of any
 Values can be *a direct input*, *{{ twig_variable }}* or a *&sub_Template*
 
 - Within the Layout or Page varabiles can been set in the Code Section: ``onStart () {$this['twig_variable'] = '.....'}`` and used in your template with standard twig markup ``{{twig_variable}}``. 
-An array can also be passed and processed with the Twig filter ``{{array_variable | json_encode()}}`` 
+An array can also be passed and processed with the Twig filter ``{{array_variable | json_encode()}}``. 
 
 - Cariables can also be set directly in the Code Section by referencing the *key* in your schema template.
 `` array_set($this->componentAlias->schema['schemaTemplate'], 'schemaKey', $customVariable);)``.
