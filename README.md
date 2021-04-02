@@ -27,10 +27,6 @@ This is very brief information. More information can be found on the support for
 
 ## Settings
 
-### Cache Life
-It's the templates cache (loaded templates files into an array) to null-time reading from disk, since had to recursively read the files (it is updated either after the expiration of the time specified in the settings, or when the layouts were updated).
-Twig and CMS have their own caches.
-
 
 ### Templates path
 The priority of the paths is as follows:
@@ -38,10 +34,15 @@ The priority of the paths is as follows:
 - b) /temlates/activeTheme/schemas
 - c) /plugins/linkonoid/schemaorgextendable/schemas
 
-### YAML definition for Schema @
-A problem with Yaml - it does not understand the "@" symbol in the definition of an array key, so you have to enclose it in quotes (but agree, even this option is more convenient than defining a schema in json).
-For this reason, I changed '@type' to '_type', since there is no need to enclose it in quotes (but in any case, you can set it in the settings, as well as the symbol for nested layouts).
+### Cache Life
+As templates can be recussive and require multiple file reads cache is used to reduce this need and keep your site running fast.
+The cache automatically expires upon the time limit (seconds) or when a layout being updated.
 
+### YAML definition for Schema @
+YAML does not understand the ***@*** symbol in the definition of an array key, this option allow you to markup correctly and have the correct syntax generated. Another option woulld be to wrap the key in "quotes".
+
+### Sub template prefix
+Used to indicate that the *value* is another template that should be included and replace *value*
 
 ### Example schema-template
 
@@ -54,26 +55,28 @@ logo: "{{ this.theme.company_logo.path }}"
 ContactPoint:
     telephone : "{{ this.theme.company_telephone }}"
     contactType: "customer service"
-
 ```
 
 
 ## Frontend
 
 ### Include in layout or partial
-The "ldJson" plugin component can be integrated into any OctoberCMS element that supports the use of standard CMS components (Layouts, Pages, Partials).
+The *Schema Markup* plugin component can be included in your website using the standard method of adding the component to the CMS Layout, Page or Partial 
 
 ### Dynamic variables
-Plugin supports all avaiables Twig variables ans Twig syntaxis in templates and in users key/value variables.
-Dynamic variables that are substituted into schematic templates can be called and used with templates in three different ways:
-- From the component, through the "Custom value" key/value pairs 
-Support key in dot notation format (parent.child). Value can be text or ``{{ twig_variable }}`` or link on &nestedSchema)
-- From the page, pass the variable for rendering via the Code-section: ``onStart () {$this['twig_variable'] = '.....'}`` and use the template in the schema definition ``{{twig_variable}}``
-To pass an array of elements to template, use the Twig filter ``{{array_variable | json_encode()}}``
-- The variable can be set directly in the code section (through the key in the schema: `` array_set($this->componentAlias->schema['schemaName'], 'schemaKey', $customVariable);`` ), without defining it via Twig markup.
+This plugin supports all avaiables Twig variables ans Twig markup in templates and in users *key:value* variables.
 
+There are three methods to use dynamic variables
+- In the component setup using the *Custom values* option. 
+By specifying a key in dot notation *parent.child* you can targent values of any array depth.
+Values can be *a direct input*, *{{ twig_variable }}* or a *&sub_Template*
+
+- Within the Layout or Page varabiles can been set in the Code Section: ``onStart () {$this['twig_variable'] = '.....'}`` and used in your template with standard twig markup ``{{twig_variable}}``. 
+An array can also be passed and processed with the Twig filter ``{{array_variable | json_encode()}}`` 
+
+- Cariables can also be set directly in the Code Section by referencing the *key* in your schema template.
+`` array_set($this->componentAlias->schema['schemaTemplate'], 'schemaKey', $customVariable);)``.
+This will automatically update the value with no Twig markup needed.
 
 ### Nested schema
-Use "&" (or your custom prefix from Settings) for define nested schema on Templates in this format ``address: &PostalAddress``
-
-
+Use ***&*** (or your custom prefix from Settings) for define sub/nested schema templates in this format ``address: &PostalAddress``
