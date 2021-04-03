@@ -75,7 +75,7 @@ Values can be *a direct input*, *{{ twig_variable }}* or a *&sub_Template*
 An array can also be passed and processed with the Twig filter ``{{array_variable | json_encode()}}``. 
 
 - Cariables can also be set directly in the Code Section by referencing the *key* in your schema template.
-`` array_set($this->componentAlias->schema['schemaTemplate'], 'schemaKey', $customVariable);)``.
+`` array_set($this->componentAlias->schema['schemaTemplate'], 'schemaKey', $customVariable);``.
 This will automatically update the value with no Twig markup needed.
 
 ### Nested schema

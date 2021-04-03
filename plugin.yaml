@@ -2,8 +2,9 @@ plugin:
     name: 'linkonoid.schemamarkup::lang.plugin.name'
     description: 'linkonoid.schemamarkup::lang.plugin.description'
     author: 'Linkonoid'
-    icon: 'icon-table'
-    homepage: 'https://github.com/linkonoid'
+    icon: 'icon-share-alt'
+    iconSvg: 'plugins/linkonoid/schemamarkup/assets/images/schemamarkup-icon.svg'
+    homepage: 'https://github.com/linkonoid/oc-schemamarkup'
 permissions:
     linkonoid.schemamarkup.access_settings:
         tab: 'linkonoid.schemamarkup::lang.permissions.tab'
@@ -13,9 +14,10 @@ settings:
         label: 'linkonoid.schemamarkup::lang.plugin.name'
         description: 'linkonoid.schemamarkup::lang.plugin.description'
         category: 'Linkonoid Frontend Bundle'
-        icon: 'icon-table'
+        icon: 'icon-share-alt'
+        iconSvg: 'plugins/linkonoid/schemamarkup/assets/images/schemamarkup-icon.svg'
         class: 'Linkonoid\SchemaMarkup\Models\Settings'
         order: 500,
-        keywords: 'backend core extend twig behavior trait scope form list widget'
+        keywords: 'seo schema.org schema-org markup'
         permissions:
             - 'linkonoid.schemamarkup.access_settings'
