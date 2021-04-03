@@ -1,0 +1,4 @@
+_type : "Person"
+name: "Test Person"
+email: "hello@test.com"
+company: &LocalBusiness

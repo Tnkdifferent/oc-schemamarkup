@@ -1,0 +1,21 @@
+plugin:
+    name: 'linkonoid.schemamarkup::lang.plugin.name'
+    description: 'linkonoid.schemamarkup::lang.plugin.description'
+    author: 'Linkonoid'
+    icon: 'icon-table'
+    homepage: 'https://github.com/linkonoid'
+permissions:
+    linkonoid.schemamarkup.access_settings:
+        tab: 'linkonoid.schemamarkup::lang.permissions.tab'
+        label: 'linkonoid.schemamarkup::lang.permissions.label'
+settings:
+    settings:
+        label: 'linkonoid.schemamarkup::lang.plugin.name'
+        description: 'linkonoid.schemamarkup::lang.plugin.description'
+        category: 'Linkonoid Frontend Bundle'
+        icon: 'icon-table'
+        class: 'Linkonoid\SchemaMarkup\Models\Settings'
+        order: 500,
+        keywords: 'backend core extend twig behavior trait scope form list widget'
+        permissions:
+            - 'linkonoid.schemamarkup.access_settings'

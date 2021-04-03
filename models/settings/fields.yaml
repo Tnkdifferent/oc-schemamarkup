@@ -1,0 +1,86 @@
+tabs:
+    stretch: true
+    defaultTab: linkonoid.schemamarkup::lang.settings.tabs.layouts
+    cssClass: text-blue
+    lazy:
+        - linkonoid.schemamarkup::lang.settings.tabs.layouts
+    paneCssClass:
+        0: first-tab
+        1: second-tab
+    icons:
+        linkonoid.schemamarkup::lang.settings.tabs.main: icon-wrench
+        linkonoid.schemamarkup::lang.settings.tabs.layouts: icon-folder-open
+    fields:
+
+        configuration_section:
+            tab: linkonoid.schemamarkup::lang.settings.tabs.main
+            label: linkonoid.schemamarkup::lang.settings.labels.configuration_section
+            type: section
+
+        schemasPath:
+            tab: linkonoid.schemamarkup::lang.settings.tabs.main
+            label: linkonoid.schemamarkup::lang.settings.labels.schemas_path
+            span: left
+            type: text
+            placeholder: linkonoid.schemamarkup::lang.settings.placeholders.schemas_path
+            commentAbove: linkonoid.schemamarkup::lang.settings.comments_above.schemas_path
+
+        schemasCachePeriod:
+            tab: linkonoid.schemamarkup::lang.settings.tabs.main
+            label: linkonoid.schemamarkup::lang.settings.labels.schemas_cache_period
+            span: right
+            type: text
+            default: 3600
+            placeholder: 3600
+            commentAbove: linkonoid.schemamarkup::lang.settings.comments_above.schemas_cache_period
+
+        hooks_and_variables_section:
+            tab: linkonoid.schemamarkup::lang.settings.tabs.main
+            label: linkonoid.schemamarkup::lang.settings.labels.hooks_and_variables_section
+            type: section
+            comment: linkonoid.schemamarkup::lang.settings.comments.hooks_and_variables_section
+
+        schemasTypePrefix:
+            tab: linkonoid.schemamarkup::lang.settings.tabs.main
+            label: linkonoid.schemamarkup::lang.settings.labels.schemas_type_prefix
+            span: left
+            type: text
+            default: '_'
+            commentAbove: linkonoid.schemamarkup::lang.settings.comments_above.schemas_type_prefix
+            comment: linkonoid.schemamarkup::lang.settings.comments_above.schemas_type_prefix
+
+        schemasSubNodePrefix:
+            tab: linkonoid.schemamarkup::lang.settings.tabs.main
+            label: linkonoid.schemamarkup::lang.settings.labels.schemas_sub_node_prefix
+            span: auto
+            type: text
+            default: '&'
+            commentAbove: linkonoid.schemamarkup::lang.settings.comments_above.schemas_sub_node_prefix
+            comment: linkonoid.schemamarkup::lang.settings.comments_above.schemas_sub_node_prefix
+
+        schemas_layouts_section:
+            tab: linkonoid.schemamarkup::lang.settings.tabs.layouts
+            label: linkonoid.schemamarkup::lang.settings.labels.schemas_layouts_section
+            type: section
+            comment: linkonoid.schemamarkup::lang.settings.comments_above.schemas_layouts_section
+            commentHtml: true
+
+        _schemasLayouts:
+            tab: linkonoid.schemamarkup::lang.settings.tabs.layouts
+            label: linkonoid.schemamarkup::lang.settings.labels.schemas_layouts
+            span: full
+            type: repeater
+            titleFrom: schema_name
+            style: accordion
+            prompt: linkonoid.schemamarkup::lang.settings.prompts.schemas_layouts
+            form:
+                fields:
+                    schema_name:
+                        label: linkonoid.schemamarkup::lang.settings.labels.schemas_layouts_schema_name
+                        type: text
+                    schema:
+                        label: linkonoid.schemamarkup::lang.settings.labels.schemas_layouts_schema
+                        type: codeeditor
+                        lang: yaml
+                        commentAbove: linkonoid.schemamarkup::lang.settings.comments_above.schemas_layouts_schema
+

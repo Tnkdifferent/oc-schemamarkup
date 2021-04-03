@@ -1,0 +1,2 @@
+_type: BreadcrumbList
+itemListElement: "{{ variable2 | json_encode() }}"

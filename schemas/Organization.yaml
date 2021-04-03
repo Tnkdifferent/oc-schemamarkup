@@ -1,0 +1,8 @@
+_type: Organization
+"@id": "{{ ''|app }}"
+name : "{{ test }}"
+url: "{{ ''|app }}"
+logo: "{{ this.theme.company_logo.path }}"
+ContactPoint:
+    telephone : "{{ this.theme.company_telephone }}"
+    contactType: "customer service"
