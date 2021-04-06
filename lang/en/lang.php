@@ -75,6 +75,9 @@
             'hooks_and_variables_section' => 'Define characters that allow for YAML markup to become Schema',
             'schemas_type_prefix' => 'The specified character will be replaced with @ on rendering',
             'schemas_sub_node_prefix' => 'When used as part of a Value, the plugin will replace with the relevant schema template',
+            'schemas_layouts_section' => 'Create and edit your YAML schema templates<br><br>
+Templates can be reclusive using the Sub Template Prefix as a value<br> Values can be dynamic using Twig markup {{ variable }}
+',
             'schemas_layouts_schema' => 'Template using YAML markup',
             'schemas_type_prefix' => 'Replaced with @ on rendering. Example - "_type:" becomes "@type:" ',
             'schemas_sub_node_prefix' => 'Example - "company: &LocalBusiness"',
@@ -84,9 +87,6 @@
             'schemas_path' => 'Path to load your templates from (optional)',
             'schemas_cache_period' => 'Cache life for the loaded template files (improving page load)',
             'hooks_and_variables_section' => 'Define characters that allow for YAML markup to become Schema',
-            'schemas_layouts_section' => 'Create and edit your YAML schema templates<br><br>
-Templates can be reclusive using the Sub Template Prefix as a value<br> Values can be dynamic using Twig markup {{ variable }}
-',
 	    ],
     ]
 ];

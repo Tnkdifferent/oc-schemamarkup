@@ -19,7 +19,7 @@ use Linkonoid\SchemaMarkup\Classes\Schemas;
 class Settings extends Model
 {
     public $implement = [
-        'Linkonoid.SchemaMarkup.Behaviors.SettingsModel',
+        '@Linkonoid.SchemaMarkup.Behaviors.SettingsModel',
         //'@RainLab.Translate.Behaviors.TranslatableModel',
     ];
 
