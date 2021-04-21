@@ -79,4 +79,4 @@ An array can also be passed and processed with the Twig filter ``{{array_variabl
 This will automatically update the value with no Twig markup needed.
 
 ### Nested schema
-Use ***&*** (or your custom prefix from Settings) for define sub/nested schema templates in this format ``address: &PostalAddress``
+Use ***&*** (or your custom prefix from Settings) for define sub/nested schema templates in this format ``address: "&PostalAddress"``
