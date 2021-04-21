@@ -80,7 +80,7 @@ Templates can be recursive using the Sub Template Prefix as a value<br> Values c
 ',
             'schemas_layouts_schema' => 'Template using YAML markup',
             'schemas_type_prefix' => 'Replaced with @ on rendering. Example - "_type:" becomes "@type:" ',
-            'schemas_sub_node_prefix' => 'Example - "company: &LocalBusiness"',
+            'schemas_sub_node_prefix' => "Example - \"company: '&LocalBusiness'\"",
 	    ],
 
         'comments' => [

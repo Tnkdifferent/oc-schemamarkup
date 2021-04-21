@@ -1,3 +1,4 @@
 1.0.1: First version of SchemaMarkup
 1.0.2: Fixed a small translation error
 1.0.3: Fixed nested render bug
+1.0.4: Fixed nested Twig-syntax render bug

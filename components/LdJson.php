@@ -122,7 +122,8 @@ class LdJson extends ComponentBase
 						}
 
 					    foreach($createSchema($item) as $key => $value){
-					    	$schema[$key] = $value;
+
+					    	$schema[$key] = is_array($value) ? $createSchema($value) : $this->twigRender($value);
 					    }
 
 					} else {
