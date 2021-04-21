@@ -86,9 +86,10 @@ class LdJson extends ComponentBase
 
             	array_walk($schemas[$schemaName], function($item, $key) use (&$buildSchema,&$schemas,&$schema)  {
 
-					if (!is_array($item) && (substr($item, 0, 1) === $this->schemasSubNodePrefix)) {
+					if (!is_array($item) && (substr(trim($item), 0, 1) === $this->schemasSubNodePrefix)) {
 
-                    	$schemaName = substr($item, 1);
+                    	$schemaName = substr(trim($item), 1);
+
                     	$schema[$key] = $buildSchema($schemaName);
 
 					} else {
@@ -120,7 +121,9 @@ class LdJson extends ComponentBase
 							$schema = $className();
 						}
 
-					    $schema[$key] = $createSchema($item);
+					    foreach($createSchema($item) as $key => $value){
+					    	$schema[$key] = $value;
+					    }
 
 					} else {
 
