@@ -1,5 +1,5 @@
 {
-    "name": "linkonoid/oc-schemamarkup",
+    "name": "linkonoid/schemamarkup-plugin",
     "description": "Use Schema.org markup to help improve your SEO",
     "keywords": [
         "schema-org",
